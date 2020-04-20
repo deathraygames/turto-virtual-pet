@@ -196,6 +196,9 @@ class Monster {
 		addStatus(happinessName, this.getStatusLevel(this.happiness, this.maxHappiness, 1));
 		const energyName = (this.tired()) ? 'Tired' : 'Rested';
 		addStatus(energyName, this.getStatusLevel(this.energy, this.maxEnergy, 1));
+		if (this.vaccination === 0) {
+			addStatus('Unvaccinated', STATUS_LEVEL_ALERT);
+		}
 		if (this.sick()) {
 			addStatus('Sick', (this.sickness > 50) ? STATUS_LEVEL_CRITICAL : STATUS_LEVEL_WARNING);
 		}
@@ -314,8 +317,8 @@ class Monster {
 	sit() {
 		this.clearTarget();
 		this.setAction(SIT, NO_TARGET, 5);
-		this.leftWalkOffset = -1;
-		this.rightWalkOffset = -1;
+		this.leftWalkOffset = -50;
+		this.rightWalkOffset = -50;
 	}
 
 	pet() {
@@ -472,7 +475,7 @@ class Monster {
 		this.addHunger(-food.foodValue);
 		this.addHealth(Math.round(food.foodValue / 10) + food.medicalValue);
 		this.addHappiness(food.happyValue);
-		let toxicity = food.contagion;
+		let toxicity = food.contagion * 1.5;
 		if (food.contagion > 0 && this.vaccination > 0) {
 			toxicity = 0;
 			this.addVaccination(-50);
@@ -547,7 +550,7 @@ class Monster {
 		const poopin = (this.bowels > poopThreshold && this.digestionCooldown === 0);
 		if (poopin) {
 			this.digestionCooldown = 10;
-			this.bowels -= poopThreshold;
+			this.bowels -= Math.max(poopThreshold, this.bowels / 3);
 			if (this.dead()) {
 				this.bowels = 0;
 				this.digestionCooldown = 0;

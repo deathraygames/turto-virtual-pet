@@ -7,7 +7,7 @@ const types = {
 	meal: { foodValue: 40, happyValue: 1, medicalValue: 0, contagion: 0, decayCooldown: 20 },
 	treat: { foodValue: 1, happyValue: 10, medicalValue: 0, contagion: 0, decayCooldown: 40 },
 	meds: { foodValue: 0, happyValue: -20, medicalValue: 12, contagion: 0, decayCooldown: 120 },
-	poop: { foodValue: 0, happyValue: -50, medicalValue: 0, contagion: 10, decayCooldown: 10 }
+	poop: { foodValue: 0, happyValue: -50, medicalValue: 0, contagion: 8, decayCooldown: 10 }
 };
 
 class Item {
