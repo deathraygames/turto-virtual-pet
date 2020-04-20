@@ -1,0 +1,87 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 22/06/2016 15:47
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-apple:before { content: "\f100"; }
+.flaticon-aubergine:before { content: "\f101"; }
+.flaticon-avocado:before { content: "\f102"; }
+.flaticon-banana:before { content: "\f103"; }
+.flaticon-beetroot:before { content: "\f104"; }
+.flaticon-bell-pepper:before { content: "\f105"; }
+.flaticon-bell-pepper-1:before { content: "\f106"; }
+.flaticon-broccoli:before { content: "\f107"; }
+.flaticon-carrot:before { content: "\f108"; }
+.flaticon-cherry:before { content: "\f109"; }
+.flaticon-chili:before { content: "\f10a"; }
+.flaticon-corn:before { content: "\f10b"; }
+.flaticon-cucumber:before { content: "\f10c"; }
+.flaticon-grape:before { content: "\f10d"; }
+.flaticon-lemon:before { content: "\f10e"; }
+.flaticon-mushroom:before { content: "\f10f"; }
+.flaticon-orange:before { content: "\f110"; }
+.flaticon-pear:before { content: "\f111"; }
+.flaticon-pineapple:before { content: "\f112"; }
+.flaticon-potato:before { content: "\f113"; }
+.flaticon-pumpkin:before { content: "\f114"; }
+.flaticon-strawberry:before { content: "\f115"; }
+.flaticon-tomato:before { content: "\f116"; }
+.flaticon-watermelon:before { content: "\f117"; }
+    
+    $font-Flaticon-apple: "\f100";
+    $font-Flaticon-aubergine: "\f101";
+    $font-Flaticon-avocado: "\f102";
+    $font-Flaticon-banana: "\f103";
+    $font-Flaticon-beetroot: "\f104";
+    $font-Flaticon-bell-pepper: "\f105";
+    $font-Flaticon-bell-pepper-1: "\f106";
+    $font-Flaticon-broccoli: "\f107";
+    $font-Flaticon-carrot: "\f108";
+    $font-Flaticon-cherry: "\f109";
+    $font-Flaticon-chili: "\f10a";
+    $font-Flaticon-corn: "\f10b";
+    $font-Flaticon-cucumber: "\f10c";
+    $font-Flaticon-grape: "\f10d";
+    $font-Flaticon-lemon: "\f10e";
+    $font-Flaticon-mushroom: "\f10f";
+    $font-Flaticon-orange: "\f110";
+    $font-Flaticon-pear: "\f111";
+    $font-Flaticon-pineapple: "\f112";
+    $font-Flaticon-potato: "\f113";
+    $font-Flaticon-pumpkin: "\f114";
+    $font-Flaticon-strawberry: "\f115";
+    $font-Flaticon-tomato: "\f116";
+    $font-Flaticon-watermelon: "\f117";
