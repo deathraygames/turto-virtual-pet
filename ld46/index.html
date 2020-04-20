@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Turto - Virtual Pet Game</title>
+	<meta name="description" content="web game for Ludum Dare 46 (2020) Keep It Alive">
+	<meta name="author" content="Luke Nickerson">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="styles/fonts.css" />
+	<link rel="stylesheet" href="styles/keep-alive.css" />
+	<link rel="icon" href="styles/favicon.ico" type="image/x-icon" />
+</head>
+<body scroll="no" class="lights-on">
+
+<div class="splash">
+	<h1>
+		<span class="char1">T</span><span class="char2">U</span><span class="char3">R</span><span class="char4">T</span><span class="char5">O</span><span class="char6">!</span>
+	</h1>
+	<div class="sub-title">A Virtual Pet Game</div>
+	<div>
+		Made in 48 hours
+		<br />for the<br />
+		46th Ludum Dare game jam
+	</div>
+	<div class="theme">
+		"Keep It Alive"
+	</div>
+	<div class="begin-tip">
+		Tap anywhere to begin
+	</div>
+	<div>
+		⏱🐢🥬🍬🥜💊💩💉💀
+	</div>
+</div>
+
+<svg id="display" width="100%" height="100%">
+	<defs>
+		<filter id="shadow">
+			<feDropShadow dx="2" dy="4" stdDeviation="0.5" flood-color="black" flood-opacity="0.2" />
+		</filter>
+	</defs>
+	<g id="display-content"></g>
+</svg>
+<dl class="info-left">
+	<!-- populated by monster status -->
+</dl>
+<dl class="info-right">
+	<!-- stats -->
+</dl>
+
+<div class="bottom-ui">
+	<ul class="main-list">
+		<li>
+			<ul class="sub-list">
+				<li>Created in 48 hrs<br />for Ludum Dare #46</li>
+				<li><a href="https://ldjam.com/" target="_blank">🕹 Ludum Dare Entry...</a></li>
+				<li><a href="https://twitter.com/deathraygames" target="_blank">💬 Twitter...</a></li>
+				<li><button type="button" class="reset-game">🔄🧨 Reset Game</button></li>
+				<!-- <li><button type="button">Save</button></li> -->
+				<li><button type="button" class="toggle-stats">🎛 Toggle Stats</button></li>
+				<li><button type="button" class="toggle-gutter">🕳 Toggle Gutter</button></li>
+				<li><button type="button" class="toggle-pause">⏸ Pause</button></li>
+				<!-- <li><button type="button">Minimize Menu</button></li> -->
+			</ul>
+			<div class="button-box">
+				<button type="button" class="open-sub">Options ^</button>
+			</div>
+			<label>Game</label>
+		</li>
+		<li>
+			<ul class="sub-list">
+				<li>Unlocked 3/3</li>
+				<li><button type="button" data-type="come" class="select-command">↗️ Command 'Come!'</button></li>
+				<li><button type="button" data-type="sit" class="select-command">🛑 Command 'Sit!'</button></li>
+				<li><button type="button" data-type="pet" class="select-command">🤚 Pet</button></li>
+			</ul>
+			<div class="button-box">
+				<button type="button" class="activate-command">___</button>
+				<button type="button" class="open-sub">^</button>
+			</div>
+			<label>Tap</label>
+		</li>
+		<li>
+			<ul class="sub-list">
+				<li>Unlocked 4/4</li>
+				<li><button type="button" data-type="snack" class="select-food">🥜 Snack</button></li>
+				<li><button type="button" data-type="meal" class="select-food">🥬 Meal</button></li>
+				<li><button type="button" data-type="treat" class="select-food">🍬 Treat</button></li>
+				<li><button type="button" data-type="meds" class="select-food">💊 Medicine</button></li>
+			</ul>
+			<div class="button-box">
+				<button type="button" class="activate-food">____</button>
+				<button type="button" class="open-sub">^</button>
+			</div>
+			<label>Feed</label>
+		</li>
+		<li>
+			<ul class="sub-list">
+				<li>Unlocked 3/3</li>
+				<li><button type="button" data-type="deathray" class="select-tool">💀 Death Ray</button></li>
+				<!-- <li><button type="button" data-type="freeze" class="select-tool">🥶 Freeze Ray</button></li> -->
+				<li><button type="button" data-type="needle" class="select-tool">💉 Vaccine Needle</button></li>
+			</ul>
+			<div class="button-box">
+				<button type="button" class="activate-tool">____</button>
+				<button type="button" class="open-sub">^</button>
+			</div>
+			<label>Tools</label>
+		</li>
+		<li>
+			<div class="button-box">
+				<button type="button" class="toggle-lights">💡 Lights</button>
+			</div>
+			<label>Room</label>
+		</li>
+	</ul>
+</div>
+
+<script src="scripts/XY.js" type="module"></script>
+<script src="scripts/Loop.js" type="module"></script>
+<script src="scripts/Monster.js" type="module"></script>
+<script src="scripts/Item.js" type="module"></script>
+<script src="scripts/virtual-pet.js" type="module"></script>
+
+</body>
+</html>
